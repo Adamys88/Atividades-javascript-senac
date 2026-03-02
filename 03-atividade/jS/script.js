@@ -1,16 +1,27 @@
-function verificarMeta() {
+document.getElementById("btnVerificar").addEventListener("click", verificar);
 
-    let bolosVendidos = 35;
-    let meta = 30;
-    let resultado = "";
+//função
+function verificar() {
+    const input = document.getElementById("numero").value;
+    const resultado = document.getElementById("resultado");
 
-    if (bolosVendidos >= meta) {
-        resultado += "A meta foi atingida! <br>";
+    const numero = Number(input);
+
+    let bolospotevendido = numero;
+    let metadevendas = 30;
+
+    if(bolospotevendido === metadevendas) {
+        resultado.innerHTML = "A meta foi atingida! ";
+        resultado.style.color = "blue";
     }
 
-    if (bolosVendidos > meta) {
-        resultado += "A meta foi superada!";
+    else if(bolospotevendido > metadevendas) {
+        resultado.innerHTML = "A meta foi superada!";
+        resultado.style.color = "green";
+    }
+    else{
+        resultado.innerHTML = "A meta NÃO foi atingida"
+        resultado.style.color = "red";
     }
 
-    document.getElementById("resultado").innerHTML = resultado;
 }    
