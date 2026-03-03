@@ -1,6 +1,10 @@
 body{
+    margin: 0;
+    background-image: url(../img/backcakes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
